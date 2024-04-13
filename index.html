@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Spending Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Daily Spending Tracker</h1>
+        <form id="spendingForm">
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" required>
+            <label for="time">Time to Spend (in minutes):</label>
+            <input type="number" id="time" required>
+            <button type="submit">Add Details</button>
+        </form>
+
+        <ul id="list"></ul>
+
+        <canvas id="mycanvas" width="auto" height="auto"></canvas>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
