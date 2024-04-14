@@ -20,6 +20,5 @@ Make sure to use a framework rather than just Vanilla javascript for more points
 Please upload the code for your project on GitHub and paste the repo link in the form below.
 Also paste the  website link. The website should be hosted on GitHub Vercel (mandatory).
 
-
 ![image](https://github.com/KafeOvid/SDC-task-round-android/assets/166736658/996c3b56-b8e1-40aa-bb87-722135600981)
 
