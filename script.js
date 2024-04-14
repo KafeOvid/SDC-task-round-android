@@ -33,6 +33,7 @@ function addList(title, time) {
     spendingChart(); 
 }
 
+
 function listItem() {
     let data = JSON.parse(localStorage.getItem('getdata')) || [];
     let listElement = document.getElementById('list');
@@ -42,6 +43,17 @@ function listItem() {
         let createItem = document.createElement('li');
         let formattedDate = new Date(element.timestamp).toLocaleString();
         createItem.textContent = `${element.title} : ${element.time} minutes : ${formattedDate}`;
+        
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent='Delete';
+        deleteBtn.classList.add('delbtn');
+        deleteBtn.onclick = ()=>{
+            let filterdata = data.filter(item => item.timestamp !== element.timestamp);
+            localStorage.setItem('getdata',JSON.stringify(filterdata));
+            listItem();
+            spendingChart();
+        }
+        createItem.appendChild(deleteBtn);
         listElement.appendChild(createItem);
     });
 }
